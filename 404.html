@@ -43,9 +43,17 @@
     h1 { margin: 26px 0 18px; font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(34px, 7vw, 62px); line-height: 1.02; letter-spacing: -.02em; color: var(--bone); }
     h1 em { color: var(--gold); font-style: italic; }
     .copy { margin: 0 auto; max-width: 52ch; font-size: clamp(15px, 2.2vw, 18px); line-height: 1.7; color: #cdc4b4; }
+    .copy strong { color: var(--gold-soft); font-weight: 600; }
+    .actions { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 20px; border: 1px solid var(--gold); background: var(--gold); color: var(--ink); text-decoration: none; font-family: Georgia, "Times New Roman", serif; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; transition: background .2s ease, border-color .2s ease, transform .2s ease, color .2s ease; }
+    .btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+    .btn:hover { background: var(--gold-soft); border-color: var(--gold-soft); transform: translateY(-1px); }
+    .btn.secondary { background: transparent; color: var(--gold-soft); border-color: var(--line); }
+    .btn.secondary:hover { background: rgba(200,168,78,.08); color: var(--gold); border-color: var(--gold); }
     .fine { margin: 26px auto 0; max-width: 46ch; padding-top: 22px; border-top: 1px solid rgba(200,168,78,.16); font-size: 12px; line-height: 1.7; letter-spacing: .04em; color: var(--ash); }
     .mark { margin-top: 30px; font-family: Georgia, "Times New Roman", serif; font-size: 10px; letter-spacing: .36em; text-transform: uppercase; color: rgba(200,168,78,.6); }
-    @media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
+    @media (max-width: 420px) { .actions { flex-direction: column; } .btn { width: 100%; } }
+    @media (prefers-reduced-motion: reduce) { .dot { animation: none; } .btn { transition: none; } }
   </style>
 </head>
 <body>
@@ -53,8 +61,18 @@
     <p class="kicker">GhazzyTV Merch</p>
     <div class="badge"><span class="dot" aria-hidden="true"></span> Work in progress</div>
     <h1>The forge is <em>still hot.</em></h1>
-    <p class="copy">The new store is being rebuilt from the ground up. Nothing is available to buy yet — check back soon.</p>
-    <p class="fine">All shop pages are offline while we finish the build. This is an early placeholder, not the live store.</p>
+    <p class="copy">We're prepping merch for <strong>YOU</strong> for the <strong>PoE2 1.0 launch</strong> — stay tuned.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.twitch.tv/ghazzytv" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.3 0 1.5 4.7v16.6h5.6V24h3.1l2.8-2.7h4.2l6.8-6.6V0H4.3Zm16.1 13.7-3.7 3.6h-5.7l-2.8 2.7v-2.7H3.6V1.9h16.8v11.8Z"/><path d="M11.2 6.1h2v6h-2zm5.5 0h2v6h-2z"/></svg>
+        Watch on Twitch
+      </a>
+      <a class="btn secondary" href="https://x.com/GhazzyTV" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z"/></svg>
+        Follow on X
+      </a>
+    </div>
+    <p class="fine">All shop pages are offline while we finish the build. Follow the stream for the drop.</p>
     <p class="mark">GhazzyTV</p>
   </main>
 </body>
